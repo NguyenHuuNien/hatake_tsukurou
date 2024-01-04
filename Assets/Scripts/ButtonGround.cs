@@ -9,7 +9,6 @@ public class ButtonGround : MonoBehaviour
     [Header("Buttons childrent")]
     [SerializeField] private GameObject[] buttons_childrent;
     [SerializeField] private FollowMouse objFollowMouse;
-    [SerializeField] private Sprite imgWaterFollowMouse;
     private bool isOpenMenu = false;
     private void changeStateMenu(){
         foreach(var o in buttons_menu){
@@ -36,7 +35,7 @@ public class ButtonGround : MonoBehaviour
             }
         }        
     }
-    public void ButtonWater(){
+    public void ButtonFollow(Sprite imgWaterFollowMouse){
         objFollowMouse.setSpriteOnMouse(imgWaterFollowMouse);
         offAllButtonsChildrent();
     }
