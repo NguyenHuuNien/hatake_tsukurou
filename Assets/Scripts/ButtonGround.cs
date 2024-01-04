@@ -9,11 +9,11 @@ public class ButtonGround : MonoBehaviour
     private bool isOpenMenu = false;
     private void changeStateMenu(){
         foreach(var o in buttons_menu){
-            o.SetActive(o.active?false:true);
+            o.SetActive(isOpenMenu);
         }
     }
     public void ButtonMenu(){
-        this.isOpenMenu = !isOpenMenu;
+        isOpenMenu = !isOpenMenu;
         changeStateMenu();
     }
 }
