@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "畑を作ろう.sln"
+    "dotnet.defaultSolution": "hatake_tsukurou.sln"
 }
