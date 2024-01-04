@@ -7,16 +7,13 @@ public class ButtonGround : MonoBehaviour
     [Header("Buttons of Menu")]
     [SerializeField] private GameObject[] buttons_menu;
     private bool isOpenMenu = false;
-    private void Update() {
-        if(isOpenMenu){
-            foreach (var item in buttons_menu)
-            {
-                item.SetActive(isOpenMenu);
-            }
+    private void changeStateMenu(){
+        foreach(var o in buttons_menu){
+            o.SetActive(o.active?false:true);
         }
-    
     }
     public void ButtonMenu(){
-        isOpenMenu = !isOpenMenu;
+        this.isOpenMenu = !isOpenMenu;
+        changeStateMenu();
     }
 }
