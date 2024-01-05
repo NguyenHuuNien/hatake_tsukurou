@@ -12,7 +12,6 @@ public class TimeGame : MonoBehaviour
     }
     private void Update() {
         setTimeNow();
-        Debug.Log(gio+":"+phut+":"+giay);
     }
     private void setTimeNow(){
         gio = DateTime.Now.Hour;
@@ -24,7 +23,6 @@ public class TimeGame : MonoBehaviour
         if(file.CanWrite){
             byte[] bytes = Encoding.ASCII.GetBytes(gio+":"+phut+":"+giay);
             file.Write(bytes,0,bytes.Length);
-            Debug.Log("Save Completed!");
         }
         file.Flush();
         file.Close();
