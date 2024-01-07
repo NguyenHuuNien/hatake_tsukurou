@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,12 @@ public class ButtonGround : MonoBehaviour
     [SerializeField] private GameObject[] buttons_childrent;
     [SerializeField] private FollowMouse objFollowMouse;
     private bool isOpenMenu = false;
+    private void Update() {
+        if(Input.GetMouseButtonDown(1)){
+            objFollowMouse.setSpriteOnMouse(null);
+            offAllButtonsChildrent();
+        }
+    }
     private void changeStateMenu(){
         foreach(var o in buttons_menu){
             o.SetActive(isOpenMenu);
@@ -35,8 +42,19 @@ public class ButtonGround : MonoBehaviour
             }
         }        
     }
-    public void ButtonFollow(Sprite imgWaterFollowMouse){
+    public void ButtonWaterFollow(Sprite imgWaterFollowMouse){
         objFollowMouse.setSpriteOnMouse(imgWaterFollowMouse);
         offAllButtonsChildrent();
+        FollowMouse.curSelect = "Water";
+    }
+    public void ButtonTreeFollow(Sprite imgWaterFollowMouse){
+        objFollowMouse.setSpriteOnMouse(imgWaterFollowMouse);
+        offAllButtonsChildrent();
+        FollowMouse.curSelect = "Tree";
+    }
+    public void ButtonEggFollow(Sprite imgWaterFollowMouse){
+        objFollowMouse.setSpriteOnMouse(imgWaterFollowMouse);
+        offAllButtonsChildrent();
+        FollowMouse.curSelect = "Egg";
     }
 }
