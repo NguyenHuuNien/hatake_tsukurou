@@ -318,4 +318,6 @@ MonoBehaviour:
   imgGrounds:
   - {fileID: -927675209, guid: 0585f71baef42a5d0b79e403d636684b, type: 3}
   - {fileID: -1801996152, guid: 0585f71baef42a5d0b79e403d636684b, type: 3}
+  - {fileID: -1921825664, guid: 0585f71baef42a5d0b79e403d636684b, type: 3}
   spRen: {fileID: 896316194619278936}
+  spHatGiong: {fileID: 5606675703996657344}

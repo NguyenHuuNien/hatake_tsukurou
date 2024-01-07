@@ -6,12 +6,14 @@ public class Grounds : MonoBehaviour
 {
     [SerializeField] private Sprite[] imgGrounds;
     [SerializeField] private SpriteRenderer spRen;
+    [SerializeField] private SpriteRenderer spHatGiong;
     private DatTrong dt;
     // Start is called before the first frame update
     void Start()
     {
         spRen.sprite = imgGrounds[0];
         dt = new DatTrong();
+        spHatGiong.sprite = null;
     }
 
     // Update is called once per frame
@@ -30,6 +32,8 @@ public class Grounds : MonoBehaviour
     public void DatTrongCay(){
         if(FollowMouse.curSelect == "Water"){
             dt.luongNuoc = 100;
+        }else if(FollowMouse.curSelect == "Tree"){
+            spHatGiong.sprite = imgGrounds[2];
         }
     }
 }
